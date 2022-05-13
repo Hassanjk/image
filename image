@@ -1,0 +1,28 @@
+php artisan make:model Image -m 
+in it (            $table->id();
+            $table->foreignId('product_id');
+            $table->String('title', 50);
+            $table->String('image', 100);
+            $table->timestamps();)
+            );
+            make image controller for it
+            create an image controller with resources
+            ad foreign key in this case product id{}
+            (
+        // my AdminPanle category-list
+        Route::get('/{pid}', 'index')->name('index');
+
+        // my AdminPanle create
+        Route::get('/create/{pid}', 'create')->name('create');
+
+        // my AdminPanle store
+        Route::post('/store/{pid}', 'store')->name('store');
+
+        // my AdminPanle update
+        Route::post('/update/{pid}/{id}', 'update')->name('update');
+
+        Route::get('/delete/{pid}/{id}', 'delete')->name('delete');
+        // my Adminpanle show
+        Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy'););
+        to your controller add a $pid
+            
